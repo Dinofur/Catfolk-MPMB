@@ -1,0 +1,114 @@
+var iFileName = "Catfolk.js";
+RequiredSheetVersion(13);
+
+SourceList["DHB"] = {
+	name : "Dino's Homebrew",
+	abbreviation : "DHB",
+};
+
+RaceList["clowder catfolk"] = {
+	regExpSearch : /^(?=.*clowder)(?=.*catfolk).*$/i,
+	name : "Clowder Catfolk",
+	sortname : "Catfolk, Clowder",
+	source : ["DHB", 0],
+	plural : "Catfolk",
+	size : 3,
+	speed : { 
+		walk : { spd : 35, enc : 25 },
+		climb : { spd : 20, enc : 10 },
+	},
+	weaponOptions : {
+		baseWeapon : "unarmed strike",
+		regExpSearch : /^(?=.*cat)(?=.*claws?).*$/i,
+		name : "Cat Claws",
+		source : ["DHB", 0],
+		damage : [1, 4, "slashing"]
+	},
+	weaponsAdd : ["Cat Claws"],
+	languageProfs : ["Common"],
+    vision : ["Low Light Vision", 60],
+    dmgres : ["Falling"],
+    skills : ["Stealth"],
+    age : " reach adulthood in their teens, and can live up to three centuries.",
+	height : " stand at around five and a half feet tall.",
+	weight : " weigh around 120 pounds.",
+	heightMetric : " stand at around 1.6 meters tall.",
+	weightMetric : " weigh around 54 kg.",
+	improvements : "Clowder Catfolk +1 Dexterity, +2 Charisma;",
+	scores : [0, 1, 0, 0, 0, 2],
+	trait : "Clowder Catfolk (+1 Dexterity, +2 Charisma)\nCatlike Reflexes:\n   I may add half your proficiency bonus, rounded down, to my initiative rolls.\nFeline Empathy:\n   You can communicate simple ideas with feline creatures, such as cats, lions, and tigers.",
+};
+
+RaceList["pride catfolk"] = {
+	regExpSearch : /^(?=.*pride)(?=.*catfolk).*$/i,
+	name : "Pride Catfolk",
+	sortname : "Catfolk, Pride",
+	source : ["DHB", 0],
+	plural : "Catfolk",
+	size : 3,
+	speed : { 
+		walk : { spd : 30, enc : 20 },
+		climb : { spd : 20, enc : 10 },
+	},
+	weaponOptions : {
+		baseWeapon : "unarmed strike",
+		regExpSearch : /^(?=.*big)(?=.*cat)(?=.*claws?).*$/i,
+		name : "Big Cat Claws",
+		source : ["DHB", 0],
+		damage : [1, 6, "slashing"]
+	},
+	weaponsAdd : ["Big Cat Claws"],
+	languageProfs : ["Common"],
+    vision : ["Low Light Vision", 60],
+    skills : ["Stealth"],
+    age : " reach adulthood in their teens, and can live up to three centuries.",
+	height : " stand at around six and a half feet tall.",
+	weight : " weigh around 200 pounds.",
+	heightMetric : " stand at around 2 meters tall.",
+	weightMetric : " weigh around 91 kg.",
+	improvements : "Pride Catfolk +1 Dexterity, +2 Strength;",
+	scores : [2, 1, 0, 0, 0, 0],
+	trait : "Pride Catfolk (+1 Dexterity, +2 Strength)\nCatlike Reflexes:\n   I may add half your proficiency bonus, rounded down, to my initiative rolls.\nFeline Empathy:\n   You can communicate simple ideas with feline creatures, such as cats, lions, and tigers.\nPowerful Build:\n   You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.",
+	carryingCapacity : 2,
+};
+
+RaceList["coven catfolk"] = {
+	regExpSearch : /^(?=.*coven)(?=.*catfolk).*$/i,
+	name : "Coven Catfolk",
+	sortname : "Catfolk, Coven",
+	source : ["DHB", 0],
+	plural : "Catfolk",
+	size : 3,
+	speed : { 
+		walk : { spd : 30, enc : 20 },
+		climb : { spd : 20, enc : 10 },
+	},
+	weaponOptions : {
+		baseWeapon : "unarmed strike",
+		regExpSearch : /^(?=.*cat)(?=.*claws?).*$/i,
+		name : "Cat Claws",
+		source : ["DHB", 0],
+		damage : [1, 4, "slashing"]
+	},
+	weaponsAdd : ["Cat Claws"],
+	languageProfs : [1, "Common"],
+    vision : ["Low Light Vision", 60],
+    skills : ["Arcana"],
+    age : " reach adulthood in their teens, and can live up to three centuries.",
+	height : " stand at around five and a half feet tall.",
+	weight : " weigh around 120 pounds.",
+	heightMetric : " stand at around 1.6 meters tall.",
+	weightMetric : " weigh around 54 kg.",
+	improvements : "Coven Catfolk +1 Dexterity, +2 Charisma;",
+	scores : [0, 1, 0, 2, 0, 0],
+	trait : "Coven Catfolk (+1 Dexterity, +2 Intelligence)\nCatlike Reflexes:\n   I may add half your proficiency bonus, rounded down, to my initiative rolls.\nFeline Empathy:\n   You can communicate simple ideas with feline creatures, such as cats, lions, and tigers.\nCat's Mysticism:\n   You know one cantrip of your choice from the wizard spell list, and can cast it at will. Intelligence is your spellcasting ability for this cantrip.",
+	spellcastingAbility : 4,
+	spellcastingBonus : {
+		name : "Cat's Mysticism",
+		class : "wizard",
+		level : [0],
+		times : 1,
+		prepared : true,
+		atwill : true,
+	},
+};
